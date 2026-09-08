@@ -1,0 +1,11 @@
+services:
+  xss-ctf:
+    build: .
+    container_name: xss-ctf
+    ports:
+      - "1337:80"
+    environment:
+      - FLAG=FLAG{34sy_X55_w1th_34sy_f1lter}
+      - FLAG_MEDIUM=FLAG{m3d1um_X55_bypa55_f1t3r}
+      - FLAG_HARD=FLAG{h4rd_X55_3xpl01t_1nput_v4l1d4t10n}
+    restart: unless-stopped
