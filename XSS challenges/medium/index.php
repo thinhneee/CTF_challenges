@@ -17,7 +17,7 @@ $blockedTags = [
     'colgroup', 'command', 'content', 'data', 'datalist', 'dd', 'del',
     'details', 'dfn', 'dialog', 'dir', 'div', 'dl', 'dt', 'element', 'em',
     'embed', 'fieldset', 'fencedframe', 'figcaption', 'figure', 'font', 'footer', 'form',
-    'frame', 'frameset', 'h1', 'head', 'header', 'hgroup', 'hr', 'html',
+    'frame', 'frameset', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hgroup', 'hr', 'html',
     'i', 'iframe', 'image', 'img', 'input', 'ins', 'kbd', 'keygen', 'label',
     'legend', 'li', 'link', 'listing', 'main', 'map', 'mark', 'marquee',
     'menu', 'menuitem', 'meta', 'meter', 'model', 'multicol', 'nav', 'nextid', 'nobr',
@@ -27,22 +27,13 @@ $blockedTags = [
     'select', 'set', 'shadow', 'slot', 'small', 'source', 'spacer', 'span',
     'strike', 'strong', 'style', 'sub', 'summary', 'sup', 'svg', 'table',
     'tbody', 'td', 'template', 'textarea', 'tfoot', 'th', 'thead', 'time',
-    'title', 'tr', 'track', 'tt', 'u', 'ul', 'var', 'video', 'wbr', 'xmp', 'xss',
-    'basefont', 'bgsound', 'comment', 'dialog', 'dir', 'isindex', 'keygen',
-    'menu', 'multicol', 'noembed', 'spacer', 'acronym', 'command', 'content',
-    'font-face', 'font-face-format', 'font-face-name', 'font-face-src',
-    'font-face-uri', 'hgroup', 'image', 'math', 'maction', 'maligngroup',
-    'malignmark', 'menclose', 'merror', 'mfenced', 'mfrac', 'mglyph', 'mi',
-    'mlabeledtr', 'mmultiscripts', 'mn', 'mo', 'mover', 'mpadded', 'mphantom',
-    'mroot', 'mrow', 'ms', 'mspace', 'msqrt', 'mstyle', 'msub', 'msup',
-    'msubsup', 'mtable', 'mtd', 'mtext', 'mtr', 'munder', 'munderover',
-    'annotation', 'annotation-xml', 'mprescripts', 'semantics', 'unknown',
-    'slot', 'template', 'portal', 'search', 'selectedcontent'
+    'title', 'tr', 'track', 'tt', 'u', 'ul', 'var', 'video', 'wbr', 'xmp',
 ];
-$blockedPatterns = [];
+
 foreach ($blockedTags as $tag) {
     $name = preg_replace('/<' . preg_quote($tag, '/') . '\b[^>]*>/i', '', $name);
 }
+$name = preg_replace('/<\s*[a-zA-Z][\w-]*\s[^>]*>/i', '', $name);
 ?>
 <!DOCTYPE html>
 <html lang="vi">
