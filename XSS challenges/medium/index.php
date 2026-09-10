@@ -54,7 +54,7 @@ $name = preg_replace('/<\s*[a-zA-Z][\w-]*\s[^>]*>/i', '', $name);
     <p>I blocked almost all tags!! Can you bypass this?</p>
 
     <form method="GET">
-        <input type="text" name="name" placeholder="Nhập tên..." value="<?= $name ?>">
+        <input type="text" name="name" placeholder="Nhập tên...">
         <button type="submit">Gửi</button>
     </form>
 

@@ -31,7 +31,7 @@ $name = preg_replace('/<script.*?>/i', '[FILTERED]', $name);
     <p>Can you "alert" the flag???</p>
     <!-- Hint: Can you steal the cookie? -->
     <form method="GET">
-        <input type="text" name="name" placeholder="Nhập tên..." value="<?= $name ?>">
+        <input type="text" name="name" placeholder="Nhập tên...">
         <button type="submit">Gửi</button>
     </form>
 

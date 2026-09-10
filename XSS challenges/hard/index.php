@@ -58,7 +58,7 @@ $name = mb_convert_kana($name, 'a', 'UTF-8');
     <p>This app is for everyone in everywhere! Type your name in your country:</p>
 
     <form method="GET">
-        <input type="text" name="name" placeholder="Nhập tên..." value="<?= $name ?>">
+        <input type="text" name="name" placeholder="Nhập tên...">
         <button type="submit">Gửi</button>
     </form>
 
